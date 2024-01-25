@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node-app:
+    image: ${IMAGE}:${TAG}
+    restart: on-failure
+    ports:
+      - ${PORT_TO_RUN}:8081
+    environment:
+      - TAG=${TAG}
+      - IMAGE=${IMAGE}
+      - PORT_TO_RUN=${PORT_TO_RUN}
