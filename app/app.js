@@ -19,7 +19,7 @@ app.use(express.static(publicDirectoryPath));
 
 // app.get('/', (req, res) => {
 //     //print the viewPath
-//     console.log(viewsPath, "viewsPath");
+//     console.log(viewsPath, "viewsPath"); 
 //     res.send('Server is up! Go ahead');
 // });
 
