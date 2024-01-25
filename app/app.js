@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// Define paths for Express config 
+// Define paths for Express config  
 const publicDirectoryPath = path.join(__dirname, '/public');
 const viewsPath = path.join(__dirname, '/templates/views');
 const partialsPath = path.join(__dirname, '/templates/partials');
