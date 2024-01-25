@@ -25,7 +25,7 @@ app.use(express.static(publicDirectoryPath));
 
 app.get('/', (req, res) => {
     res.render('index', { 
-        title: 'Home Page',
+        title: 'Home Page', 
         name: 'Deepak Kumar'
     })
 })
