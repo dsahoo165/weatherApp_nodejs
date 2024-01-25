@@ -17,7 +17,7 @@ hbs.registerPartials(partialsPath);
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath)); 
 
-// app.get('/', (req, res) => {
+// app.get('/', (req, res) => { 
 //     //print the viewPath
 //     console.log(viewsPath, "viewsPath"); 
 //     res.send('Server is up! Go ahead');
