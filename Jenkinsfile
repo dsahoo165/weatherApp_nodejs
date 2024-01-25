@@ -24,19 +24,19 @@ agent any
         }
         stage('Run Image') {
             steps {  
-	dir("workspace"){		
-                sh """
-                docker ps   
-		
-                docker compose down
-                
-                export IMAGE=dsahoo165/node_api_html
-                export TAG=${env.BUILD_NUMBER}
-                export PORT_TO_RUN=3000
-                docker compose up -d
+	            dir("workspace"){		
+                    sh """
+                    docker ps   
+            
+                    docker compose down
+                    
+                    export IMAGE=dsahoo165/node_api_html
+                    export TAG=${env.BUILD_NUMBER}
+                    export PORT_TO_RUN=3000
+                    docker compose up -d
 
-                docker ps
-                """
+                    docker ps
+                    """
             }
 	    }
         }
