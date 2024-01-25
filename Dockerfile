@@ -13,7 +13,7 @@ WORKDIR /home/app
 # will execute npm install in /home/app because of WORKDIR
 RUN npm install
 
-EXPOSE 8081
+EXPOSE 3000
 
 # no need for /home/app/server.js because of WORKDIR
 CMD ["node", "index.js"]

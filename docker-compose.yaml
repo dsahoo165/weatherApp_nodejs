@@ -4,7 +4,7 @@ services:
     image: ${IMAGE}:${TAG}
     restart: on-failure
     ports:
-      - ${PORT_TO_RUN}:8081
+      - ${PORT_TO_RUN}:3000
     environment:
       - TAG=${TAG}
       - IMAGE=${IMAGE}
