@@ -130,7 +130,9 @@ app.post("/editIMG", async (req, res) => {
     //try {
         const imagePathInRequest = req.body.img;
         const imageNameToEdit = imagePathInRequest.substring(imagePathInRequest.lastIndexOf("/") + 1);
-        const imagePath = 'public/img/' + imageNameToEdit;
+        //const imagePath = 'public/img/' + imageNameToEdit;
+        const imagePath = 'response.png';
+        
         const prompt = req.body.prompt;
         
         console.log(imagePathInRequest, "req.body.img");
@@ -168,8 +170,8 @@ app.post("/editIMG", async (req, res) => {
 
             //Download image
             var randomValue = Math.floor(Math.random() * 1000000) + 1;
-            //var imageName = 'public/img/' + randomValue + '.png';
-            var imageName = 'response.png';
+            var imageName = 'public/img/' + randomValue + '.png';
+
             await downloadImage(imageUrl, imageName);
             jsonData.img = "/img/" + randomValue + '.png';           
             
