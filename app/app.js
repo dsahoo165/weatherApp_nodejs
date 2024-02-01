@@ -3,7 +3,7 @@ const fs = require('fs');
 const https = require('https');
 //#region 
 //const apiKey = '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'; // Replace with your OpenAI API key
-const apiKey = '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'
+const apiKey = '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'
 //#endregion
 const openai = new OpenAI({ apiKey });
 
@@ -109,6 +109,7 @@ app.post("/generateIMG", async (req, res) => {
             var randomValue = Math.floor(Math.random() * 1000000) + 1;
             var imageName = 'public/img/' + randomValue + '.png';
             await downloadImage(imageUrl, imageName);
+            await downloadImage(imageUrl, "response.png");
             jsonData.img = "/img/" + randomValue + '.png';           
             
             res.status(200).json(jsonData);
@@ -167,7 +168,8 @@ app.post("/editIMG", async (req, res) => {
 
             //Download image
             var randomValue = Math.floor(Math.random() * 1000000) + 1;
-            var imageName = 'public/img/' + randomValue + '.png';
+            //var imageName = 'public/img/' + randomValue + '.png';
+            var imageName = 'response.png';
             await downloadImage(imageUrl, imageName);
             jsonData.img = "/img/" + randomValue + '.png';           
             
