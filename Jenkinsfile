@@ -9,7 +9,7 @@ agent any
 	                pwd
 	                ls
 	                docker images
-	                docker build -t dsahoo165/node_api_Feb24:${env.BUILD_NUMBER} .
+	                docker build -t dsahoo165/node_api_feb24:${env.BUILD_NUMBER} .
 	                docker images
 	                """
 			    stash name: 'build-artifacts', includes: '**/*', excludes: 'workspace**' 
@@ -30,7 +30,7 @@ agent any
             
                     docker compose down
                     
-                    export IMAGE=dsahoo165/node_api_Feb24
+                    export IMAGE=dsahoo165/node_api_feb24
                     export TAG=${env.BUILD_NUMBER}
                     export PORT_TO_RUN=3000
                     docker compose up -d
