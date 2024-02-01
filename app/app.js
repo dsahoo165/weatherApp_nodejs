@@ -3,7 +3,7 @@ const fs = require('fs');
 const https = require('https');
 //#region 
 //const apiKey = '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'; // Replace with your OpenAI API key
-const apiKey = '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'
+const apiKey = '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'
 //#endregion
 const openai = new OpenAI({ apiKey });
 
